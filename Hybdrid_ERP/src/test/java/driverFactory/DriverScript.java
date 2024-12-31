@@ -27,7 +27,6 @@ public class DriverScript {
 	ExtentReports reports;
 	ExtentTest logger;
 	
-
 	public void startTest() throws IOException {
 		String Module_status = "";
 		String Module_new = "";
