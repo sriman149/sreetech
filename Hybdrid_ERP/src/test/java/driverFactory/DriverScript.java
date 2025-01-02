@@ -15,7 +15,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import commonFunctions.FunctionLibrary;
 import utilities.ExcelFileUtil;
 
-
 public class DriverScript {
 
 	public static WebDriver driver;
