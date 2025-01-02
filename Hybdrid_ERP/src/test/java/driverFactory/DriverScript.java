@@ -16,7 +16,6 @@ import commonFunctions.FunctionLibrary;
 import utilities.ExcelFileUtil;
 
 
-
 public class DriverScript {
 
 	public static WebDriver driver;
