@@ -34,7 +34,7 @@ public class DriverScript {
 		for (int i = 1; i <= xl.rowCount(TCSheet); i++) {
 			if (xl.getCellData(TCSheet, i, 2).equalsIgnoreCase("Y")) {
 						
-				// store corresponding sheet or testcases into TCModule
+				// store corresponding sheet or test cases into TCModule
 				TCModule = xl.getCellData(TCSheet, i, 1);
 				//define path for html report
 				reports =new ExtentReports("./target/ExtentReports/"+TCModule+FunctionLibrary.generateDate()+".html");
