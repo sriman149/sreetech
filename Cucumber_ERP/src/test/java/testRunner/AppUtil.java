@@ -25,9 +25,7 @@ static String file = "C:\\Users\\Sreeman\\eclipse-workspace\\Cucumber_ERP\\src\\
         String headless = prop.getProperty("headless", "false");
 
         if (browser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
-
-            ChromeOptions options = new ChromeOptions();
+                       ChromeOptions options = new ChromeOptions();
             if (headless.equalsIgnoreCase("true")) {
                 options.addArguments("--headless=new");
             }
