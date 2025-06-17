@@ -21,15 +21,30 @@ static String file = "C:\\Users\\Sreeman\\eclipse-workspace\\Cucumber_ERP\\src\\
 	public static WebDriver launchBrowser() throws FileNotFoundException, IOException {
 		prop = new Properties();
 		prop.load(new FileInputStream(file));
-		if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-			driver = new ChromeDriver();
-		} else {
-			if (prop.getProperty("browser").equalsIgnoreCase("edge")) {
-				driver = new EdgeDriver();
-			}
-		}
-		
-		return driver;
+		String browser = prop.getProperty("browser");
+        String headless = prop.getProperty("headless", "false");
+
+        if (browser.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+
+            ChromeOptions options = new ChromeOptions();
+            if (headless.equalsIgnoreCase("true")) {
+                options.addArguments("--headless=new");
+            }
+            options.addArguments("--start-maximized");
+
+            driver = new ChromeDriver(options);
+
+        } else if (browser.equalsIgnoreCase("edge")) {
+            System.setProperty("webdriver.edge.driver", "C:\\drivers\\msedgedriver.exe");
+
+            EdgeOptions options = new EdgeOptions();
+            if (headless.equalsIgnoreCase("true")) {
+                options.addArguments("--headless=new");
+            }
+
+            driver = new EdgeDriver(options);
+        }
 	}
 
 	@Test
