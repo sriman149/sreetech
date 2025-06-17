@@ -35,10 +35,10 @@
 
 
 
- 	<dependency>
- 		<groupId>Automation</groupId>
- 		<artifactId>selenium-Framework_Design</artifactId>
- 		<version>0.0.1-SNAPSHOT</version>
- 	</dependency>
+ <dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-java</artifactId>
+  <version>4.20.0</version> <!-- or the latest -->
+</dependency>
  </dependencies>
 </project>
