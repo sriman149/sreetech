@@ -65,7 +65,6 @@ public class FunctionLibrary {
 			mywait.until(ExpectedConditions.visibilityOfElementLocated(By.id(LocatorValue)));
 		}
 	}
-
 	// method for nay textbox
 	public static void typeAction(String LocatorType, String LocatorValue, String testData) {
 		if (LocatorType.equalsIgnoreCase("xpath")) {
