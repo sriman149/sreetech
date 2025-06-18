@@ -94,6 +94,7 @@ public class FunctionLibrary {
 		}
 	}
 
+	
 	// method for validate any page Title
 	public static void validateTitle(String Expected_Title) {
 		String Actual_Title = driver.getTitle();
